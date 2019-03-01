@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BookRent</string>
+
+    <string name="welcome_message">Bem-Vindo(a) ao BookRent</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="document">CPF</string>
+    <string name="phone">Celular</string>
+    <string name="confirm_email">Confirme o E-Mail</string>
+    <string name="confirm_password">Senha</string>
+    <string name="regiter">Registre-se</string>
+    <string name="login">Entrar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="invalid_login">Usuário e/ou senha inválidos</string>
+</resources>
