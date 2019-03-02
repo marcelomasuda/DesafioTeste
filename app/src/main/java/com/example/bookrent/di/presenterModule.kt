@@ -16,7 +16,7 @@ val presenterModule: Module = module {
     //Sign
     viewModel { SignPresenter() }
     viewModel { SignInPresenter(get(), get()) }
-    viewModel { SignUpPresenter() }
+    viewModel { SignUpPresenter(get(), get()) }
 
 
 }
