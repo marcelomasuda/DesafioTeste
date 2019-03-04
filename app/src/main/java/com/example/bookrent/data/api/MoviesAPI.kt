@@ -10,10 +10,10 @@ import retrofit2.http.Query
 interface MoviesAPI {
 
     @Headers(
-        "trakt-api-version : 2",
-        "trakt-api-key : $API_KEY",
-        "Content-Type : application/json"
+        "trakt-api-version: 2",
+        "trakt-api-key: $API_KEY",
+        "Content-Type: application/json"
     )
-    @GET("movies/popular?limit=15&extended=full")
+    @GET("movies/popular?limit=100&extended=full")
     fun getMoviesList(@Query("page") page: Int): Observable<List<Movies>>
 }

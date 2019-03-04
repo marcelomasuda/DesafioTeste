@@ -1,5 +1,6 @@
 package com.example.bookrent.screens.sign.signup
 
+import android.util.Log
 import com.example.bookrent.base.presenter.BasePresenter
 import com.example.bookrent.data.model.User
 import com.example.bookrent.data.repository.LoginRepository
@@ -14,7 +15,9 @@ class SignUpPresenter(
         val disposable = Observable.just(repository)
             .subscribeOn(scheduler.io())
             .subscribe {
+
                 val response = it.createUser(user)
+                Log.i("LOGIN", "$response")
                 if (response > 0) {
                     getView().onComplete()
                 } else {

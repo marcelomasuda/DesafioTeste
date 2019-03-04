@@ -8,11 +8,12 @@ import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
 
 val dbModule: Module = module {
-    val dbname = "book-rent-db"
+    val dbname = "favorite-movies-db"
 
     single {  Room.databaseBuilder(androidApplication(), AppRoom::class.java, dbname).build() }
 
     // Add all rooms in project
 
     single { get<AppRoom>().loginRoom() }
+    single { get<AppRoom>().movieRoom() }
 }

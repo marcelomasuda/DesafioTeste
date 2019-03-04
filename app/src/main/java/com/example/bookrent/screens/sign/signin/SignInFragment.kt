@@ -1,9 +1,11 @@
 package com.example.bookrent.screens.sign.signin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.example.bookrent.R
 import com.example.bookrent.base.view.BaseFragment
+import com.example.bookrent.screens.main.MainActivity
 import com.example.bookrent.screens.sign.SignActivity
 import com.jakewharton.rxbinding2.view.clicks
 import com.jakewharton.rxbinding2.widget.textChanges
@@ -47,14 +49,14 @@ class SignInFragment : BaseFragment(), SignInView {
             sign_in_login_btn.clicks().subscribe {
                 mPresenter.doLogin(
                     sign_in_email.text.toString().toLowerCase(),
-                    sign_in_password.text.toString().toLowerCase()
+                    sign_in_password.text.toString()
                 )
             }, isEnabled.subscribe { toggleLoginEnabled(it) }
         )
     }
 
     override fun onLogin() {
-
+        startActivity(Intent(this.context, MainActivity::class.java))
     }
 
     override fun onError() {

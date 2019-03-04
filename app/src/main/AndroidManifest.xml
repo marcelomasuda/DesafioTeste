@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.example.bookrent">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
             android:name=".BaseApp"
             android:allowBackup="true"
@@ -18,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".screens.sign.SignActivity"/>
+        <activity android:name=".screens.main.MainActivity"/>
     </application>
 
 </manifest>

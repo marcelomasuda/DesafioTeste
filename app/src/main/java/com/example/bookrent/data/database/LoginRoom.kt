@@ -10,7 +10,7 @@ import io.reactivex.Single
 @Dao
 interface LoginRoom {
 
-    @Query("SELECT * FROM user WHERE email=:email & password=:password")
+    @Query("SELECT * FROM user WHERE email = :email AND password = :password")
     fun doLogin(email: String, password: String): Single<User>
 
     @Insert()

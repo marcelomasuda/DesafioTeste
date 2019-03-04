@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BookRent</string>
+    <string name="app_name">Favorite Movies</string>
 
     <string name="welcome_message">Bem-Vindo(a) ao BookRent</string>
     <string name="email">E-Mail</string>
@@ -23,4 +23,5 @@
     <string name="create_user_error">Erro ao criar usuário, verifique as informações e tente novamente</string>
     <string name="nav_movie_list">Filmes</string>
     <string name="nav_favorites">Favoritos</string>
+    <string name="trailer_button"><u>Clique aqui para ver o trailer</u></string>
 </resources>
