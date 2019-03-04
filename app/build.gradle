@@ -7,12 +7,12 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.bookrent"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -27,17 +27,20 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //Android design
-    implementation "com.android.support:appcompat-v7:$design_version"
-    implementation "com.android.support:support-media-compat:$design_version"
-    implementation "com.android.support:support-v4:$design_version"
-    implementation "com.android.support:design:$design_version"
-    implementation "com.android.support.constraint:constraint-layout:$layout_version"
-    implementation "com.android.support:multidex:$multidex_version"
+    implementation "androidx.appcompat:appcompat:$design_version"
+    implementation "androidx.media:media:$design_version"
+    implementation "androidx.legacy:legacy-support-v4:$design_version"
+    implementation "androidx.constraintlayout:constraintlayout:$layout_version"
+    implementation "androidx.recyclerview:recyclerview:$design_version"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation "androidx.legacy:legacy-support-core-ui:$design_version"
+
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.google.code.gson:gson:2.8.5'
 
     //Rx
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
@@ -48,9 +51,9 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxbinding_version"
 
     // Room Android Component
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    implementation "android.arch.persistence.room:rxjava2:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     // Koin Dependency Injection
     implementation "org.koin:koin-core:$koin_version"
@@ -60,7 +63,11 @@ dependencies {
     //Mask EditText
     implementation "com.github.santalu:mask-edittext:$mask_edittext_version"
 
+    //Infinity Scroll
+    implementation 'com.github.pwittchen:infinitescroll:0.0.2'
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 }

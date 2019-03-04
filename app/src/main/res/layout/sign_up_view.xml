@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <LinearLayout
@@ -9,7 +10,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -18,14 +19,14 @@
                 android:hint="@string/name"
                 android:id="@+id/textInputLayout3">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_name"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -34,14 +35,14 @@
                 android:hint="@string/document"
                 android:id="@+id/textInputLayout4">
 
-            <com.santalu.widget.MaskEditText
+            <com.santalu.maskedittext.MaskEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     app:met_mask="###.###.###-##"
                     android:id="@+id/register_document"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:text="@string/invalid_document"
@@ -55,7 +56,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="12sp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -64,14 +65,14 @@
                 android:hint="@string/phone"
                 android:id="@+id/textInputLayout5">
 
-            <com.santalu.widget.MaskEditText
+            <com.santalu.maskedittext.MaskEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     app:met_mask="+55 (##) #####-####"
                     android:id="@+id/register_phone"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:text="@string/invalid_phone"
@@ -85,7 +86,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="12sp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -94,13 +95,13 @@
                 android:hint="@string/email"
                 android:id="@+id/textInputLayout6">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_email"
                     android:inputType="textEmailAddress"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:layout_width="match_parent"
@@ -114,7 +115,7 @@
                 android:textSize="12sp"
                 android:visibility="gone"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -123,13 +124,13 @@
                 android:id="@+id/textInputLayout7"
                 android:layout_marginTop="16dp">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_email_confirm"
                     android:inputType="textEmailAddress"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:text="@string/invalid_email_confirm"
@@ -143,7 +144,7 @@
                 android:textSize="12sp"
                 android:visibility="gone"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -152,13 +153,13 @@
                 android:hint="@string/password"
                 android:id="@+id/textInputLayout8">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_password"
                     android:inputType="textPassword"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:text="@string/invalid_pass"
@@ -172,7 +173,7 @@
                 android:textSize="12sp"
                 android:visibility="gone"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -181,13 +182,13 @@
                 android:hint="@string/confirm_password"
                 android:id="@+id/textInputLayout9">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_password_confirm"
                     android:inputType="textPassword"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
                 android:text="@string/invalid_pass_confirm"

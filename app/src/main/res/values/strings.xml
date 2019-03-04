@@ -21,4 +21,6 @@
     <string name="invalid_document">CPF inválido</string>
     <string name="invalid_phone">Celular inválido</string>
     <string name="create_user_error">Erro ao criar usuário, verifique as informações e tente novamente</string>
+    <string name="nav_movie_list">Filmes</string>
+    <string name="nav_favorites">Favoritos</string>
 </resources>

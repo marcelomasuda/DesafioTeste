@@ -1,6 +1,6 @@
 package com.example.bookrent.di
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import com.example.bookrent.data.database.AppRoom
 import com.example.bookrent.data.database.LoginRoom
 import org.koin.android.ext.koin.androidApplication

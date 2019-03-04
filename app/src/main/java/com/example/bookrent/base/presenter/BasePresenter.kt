@@ -1,6 +1,6 @@
 package com.example.bookrent.base.presenter
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.example.bookrent.base.view.BaseView
 import io.reactivex.disposables.CompositeDisposable
 
