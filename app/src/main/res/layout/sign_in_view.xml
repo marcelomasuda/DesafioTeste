@@ -59,7 +59,7 @@
             android:textColor="@android:color/holo_blue_dark" android:text="@string/regiter"/>
     <ImageView
             android:layout_width="80dp"
-            android:layout_height="80dp" app:srcCompat="@drawable/ic_books"
+            android:layout_height="80dp" app:srcCompat="@drawable/ic_movie"
             android:id="@+id/imageView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"

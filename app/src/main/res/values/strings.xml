@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Favorite Movies</string>
 
-    <string name="welcome_message">Bem-Vindo(a) ao BookRent</string>
+    <string name="welcome_message">Bem-Vindo(a) ao FavoritesMovies</string>
     <string name="email">E-Mail</string>
     <string name="password">Senha</string>
     <string name="name">Nome</string>

@@ -213,12 +213,13 @@
                     android:layout_width="150dp"
                     android:layout_height="48dp"
                     android:id="@+id/sign_up_cancel_btn"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@android:color/white"
                     android:text="@string/cancel"/>
             <Button
                     android:layout_width="150dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
                     android:id="@+id/sign_up_register_btn"
                     android:background="@android:color/white"
                     android:text="@string/confirm"/>
