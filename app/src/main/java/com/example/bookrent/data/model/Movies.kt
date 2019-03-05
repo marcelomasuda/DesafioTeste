@@ -1,7 +1,5 @@
 package com.example.bookrent.data.model
 
-import androidx.room.Entity
-
 class Movies {
     var title: String = ""
     var year: Long = 0

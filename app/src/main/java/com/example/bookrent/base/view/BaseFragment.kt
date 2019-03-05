@@ -2,19 +2,16 @@ package com.example.bookrent.base.view
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import io.reactivex.disposables.CompositeDisposable
 
 abstract class BaseFragment : Fragment(), BaseView {
 
     protected val disposableBag = CompositeDisposable()
     private var mActivity: BaseActivity? = null
-
-    fun getBaseActivity(): BaseActivity =
-        mActivity!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return if (getLayoutId() > 0) {

@@ -8,4 +8,5 @@ interface FavoriteRepository {
     fun insertFavorite(movie: Favorites)
     fun getFavorites(): Observable<List<Favorites>>
     fun removeFavorite(movie: Favorites)
+    fun searchFavorite(title: String): Observable<Favorites?>
 }

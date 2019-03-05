@@ -1,6 +1,5 @@
 package com.example.bookrent.screens.main.movieList
 
-import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +40,7 @@ class MovieListAdapter: RecyclerView.Adapter<MovieListAdapter.MovieListViewHolde
         val isExpanded = position == expandedPosition
         val decimalFormat = DecimalFormat("##.#")
         view.setOnClickListener(null)
+        view.movie_add_favorite.setOnClickListener(null)
         view.movie_name.text = item.title
         view.movie_year.text = item.year.toString()
         view.movie_rating.text = "${decimalFormat.format(item.rating)}/10"
@@ -53,10 +53,7 @@ class MovieListAdapter: RecyclerView.Adapter<MovieListAdapter.MovieListViewHolde
         }
 
         view.setOnClickListener{expandItem(view, position, isExpanded)}
-        view.setOnLongClickListener {
-            onFavorite.onNext(item)
-            return@setOnLongClickListener true
-        }
+        view.movie_add_favorite.setOnClickListener {onFavorite.onNext(item)}
     }
 
     private fun expandItem(view: View, position: Int, isExpanded: Boolean) {

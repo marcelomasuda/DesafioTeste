@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.bookrent.data.model.User
-import io.reactivex.Maybe
 import io.reactivex.Single
 
 @Dao
@@ -13,6 +12,6 @@ interface LoginRoom {
     @Query("SELECT * FROM user WHERE email = :email AND password = :password")
     fun doLogin(email: String, password: String): Single<User>
 
-    @Insert()
+    @Insert
     fun createUser(user: User): Long
 }

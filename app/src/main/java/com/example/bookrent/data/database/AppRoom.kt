@@ -2,7 +2,6 @@ package com.example.bookrent.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import com.example.bookrent.data.model.Favorites
 import com.example.bookrent.data.model.User
 
@@ -13,6 +12,5 @@ import com.example.bookrent.data.model.User
 abstract class AppRoom : RoomDatabase() {
 
     abstract fun loginRoom(): LoginRoom
-    abstract fun movieRoom(): MovieRoom
 
 }

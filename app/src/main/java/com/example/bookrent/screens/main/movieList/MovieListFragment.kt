@@ -41,8 +41,10 @@ class MovieListFragment : BaseFragment(), MovieListView {
             mAdapter.onWatchTrailer.subscribe {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it.trailer)))
             },
-            mAdapter.onFavorite.subscribe {
-                mPresenter.insertFavorite(it)
+            mAdapter.onFavorite
+                .subscribe {
+//                    Log.i("FAVORITOS", "ON FAVORITE")
+                mPresenter.searchFavorite(it)
             }
         )
         mPresenter.getMoviesList()

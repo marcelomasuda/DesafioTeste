@@ -1,6 +1,6 @@
 package com.example.bookrent.di
 
-import com.example.bookrent.screens.main.favoriteList.FavoritePresenter
+import com.example.bookrent.screens.main.favoriteList.FavoriteListPresenter
 import com.example.bookrent.screens.main.movieList.MovieListPresenter
 import com.example.bookrent.screens.sign.SignPresenter
 import com.example.bookrent.screens.sign.signin.SignInPresenter
@@ -20,7 +20,7 @@ val presenterModule: Module = module {
     viewModel { SignInPresenter(get(), get()) }
     viewModel { SignUpPresenter(get(), get()) }
     viewModel { MovieListPresenter(get(), get(), get()) }
-    viewModel { FavoritePresenter(get(), get())}
+    viewModel { FavoriteListPresenter(get(), get())}
 
 
 }

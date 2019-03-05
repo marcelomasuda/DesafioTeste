@@ -1,7 +1,5 @@
 package com.example.bookrent.base.view
 
-import android.content.Context
-
 interface BaseView {
 
     fun attachView()

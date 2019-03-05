@@ -1,7 +1,6 @@
 package com.example.bookrent.screens.sign.signup
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.bookrent.R
@@ -9,7 +8,6 @@ import com.example.bookrent.base.view.BaseFragment
 import com.example.bookrent.data.model.User
 import com.example.bookrent.util.FormValidator
 import com.jakewharton.rxbinding2.view.clicks
-import com.jakewharton.rxbinding2.widget.text
 import kotlinx.android.synthetic.main.sign_up_view.*
 import org.koin.android.viewmodel.ext.android.viewModel
 

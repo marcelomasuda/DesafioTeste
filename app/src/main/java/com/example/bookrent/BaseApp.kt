@@ -3,7 +3,6 @@ package com.example.bookrent
 import androidx.multidex.MultiDexApplication
 import com.example.bookrent.di.*
 import org.koin.android.ext.android.startKoin
-import org.koin.standalone.StandAloneContext.startKoin
 
 class BaseApp: MultiDexApplication() {
 

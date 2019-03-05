@@ -1,5 +1,6 @@
 package com.example.bookrent.screens.main.movieList
 
+import android.util.Log
 import com.example.bookrent.base.presenter.BasePresenter
 import com.example.bookrent.data.model.Favorites
 import com.example.bookrent.data.model.Movies
@@ -23,7 +24,24 @@ class MovieListPresenter(
         disposableBag?.add(disposable)
     }
 
-    fun insertFavorite(movie: Movies) {
+    fun searchFavorite(movie: Movies) {
+        val disposable = favoriteRepository.searchFavorite(movie.title)
+            .observeOn(scheduler.ui())
+            .subscribeOn(scheduler.io())
+            .subscribe({
+                if (it != null) {
+                    Log.i("FAVORITOS", "$it")
+                } else {
+                    Log.i("FAVORITOS", "TESTE")
+                }
+            }, {
+                Log.i("FAVORITOS", "$it")
+                insertFavorite(movie)
+            })
+        disposableBag?.add(disposable)
+    }
+
+    private fun insertFavorite(movie: Movies) {
         val favorite = Favorites(0, movie.title, movie.year, movie.rating)
         val disposable = Observable.just(favoriteRepository)
             .subscribeOn(scheduler.io())
