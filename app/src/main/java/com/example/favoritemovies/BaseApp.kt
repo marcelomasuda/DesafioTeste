@@ -9,7 +9,7 @@ class BaseApp: MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
+//        if(BuildConfig.FLAVOR == "")
         startKoin(this, listOf(appModule, dbModule, presenterModule, repositoryModule, apiModule))
     }
 }

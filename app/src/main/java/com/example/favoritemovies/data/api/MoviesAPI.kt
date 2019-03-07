@@ -14,6 +14,6 @@ interface MoviesAPI {
         "trakt-api-key: $API_KEY",
         "Content-Type: application/json"
     )
-    @GET("movies/popular?limit=50&extended=full")
+    @GET("movies/popular?limit=10&extended=full")
     fun getMoviesList(@Query("page") page: Int): Observable<List<Movies>>
 }

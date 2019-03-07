@@ -14,8 +14,9 @@ class MovieListPresenter(
     private val movieRepository: MoviesRepository,
     private val favoriteRepository: FavoriteRepository): BasePresenter<MovieListView>() {
 
+
     fun getMoviesList() {
-        val disposable = movieRepository.getMoviesList(0)
+        val disposable = movieRepository.getMoviesList(20)
             .observeOn(scheduler.ui())
             .subscribeOn(scheduler.io())
             .subscribe {

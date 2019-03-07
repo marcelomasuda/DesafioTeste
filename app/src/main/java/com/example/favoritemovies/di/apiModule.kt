@@ -1,6 +1,9 @@
 package com.example.favoritemovies.di
 
+import android.util.Log
+import com.example.favoritemovies.BuildConfig
 import com.example.favoritemovies.data.api.MoviesAPI
+import com.example.favoritemovies.data.api.MoviesAPIMock
 import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
 import retrofit2.Retrofit
@@ -20,5 +23,10 @@ val apiModule: Module = module {
 
     single { createRetrofit() }
 
-    single { get<Retrofit>().create(MoviesAPI::class.java) }
+    Log.i("FAVORITO", "${BuildConfig.BUILD_TYPE}, ${BuildConfig.FLAVOR}, ${BuildConfig.VERSION_NAME}, teeste")
+    if (BuildConfig.FLAVOR == "api") {
+        single { get<Retrofit>().create(MoviesAPI::class.java) }
+    } else {
+        single { MoviesAPIMock() as MoviesAPI}
+    }
 }
