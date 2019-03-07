@@ -6,7 +6,7 @@ apply plugin: "kotlin-kapt"
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.bookrent"
+        applicationId "com.example.favoritemovies"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -69,5 +69,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 }
