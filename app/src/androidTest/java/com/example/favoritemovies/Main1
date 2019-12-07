@@ -1,0 +1,22 @@
+//Adding wrong values for variables to simulate
+
+class Entries {
+    var username: String? = null
+    var password: String = "Baker"
+    var email: String = "Teste"
+    var cellnum: String? = null
+    var cpf: String? = null
+}
+
+fun main() {
+    println("Enter Username")
+    result username
+    println("Password")
+    result password
+    println("Enter E-mail")
+    result email
+    println("Cell Phone Number")
+    result cellnum
+    println("CPF")
+    result cpf
+}
